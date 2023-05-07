@@ -1,0 +1,5 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+/src/test/resources/chromedriver.exe
+/src/test/resources/LICENSE.chromedriver

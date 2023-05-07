@@ -1,0 +1,10 @@
+[INFO] 2023-05-07 10:47:09.608 [main] AddingProductsToCartStepdefs - Opened homepage
+[INFO] 2023-05-07 10:47:11.806 [main] AddingProductsToCartStepdefs - Found first product
+[INFO] 2023-05-07 10:47:12.448 [main] AddingProductsToCartStepdefs - Added first product to cart
+[INFO] 2023-05-07 10:47:15.511 [main] AddingProductsToCartStepdefs - Closed alert
+[INFO] 2023-05-07 10:47:15.838 [main] AddingProductsToCartStepdefs - Navigated back to homepage
+[INFO] 2023-05-07 10:47:18.834 [main] AddingProductsToCartStepdefs - Found second product
+[INFO] 2023-05-07 10:47:19.407 [main] AddingProductsToCartStepdefs - Added second product to cart
+[INFO] 2023-05-07 10:47:22.663 [main] AddingProductsToCartStepdefs - Closed alert
+[INFO] 2023-05-07 10:47:24.060 [main] AddingProductsToCartStepdefs - Opened cart page
+[INFO] 2023-05-07 10:47:25.606 [main] AddingProductsToCartStepdefs - Asserted if both items have been added to the cart
