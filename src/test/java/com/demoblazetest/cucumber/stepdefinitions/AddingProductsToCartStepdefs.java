@@ -51,9 +51,20 @@ public class AddingProductsToCartStepdefs {
         logger.info("Opened homepage");
     }
 
-    @When("I click the link for the first product")
-    public void iClickTheLinkForTheFirstProduct() {
-        webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    @When("I click the link for the first product {string}")
+    public void iClickTheLinkForTheFirstProduct(String arg0) {
+        if("laptopOne".equals(arg0)){
+            homePage.goToLaptopSection();
+        }else if("monitorOne".equals(arg0)){
+            homePage.goToMonitorSection();
+        } else if (!"mobileOne".equals(arg0)){
+            logger.error("First product not found");
+        }
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         WebElement firstProductElement = webDriver.findElement(By.xpath("/html/body/div[5]/div/div[2]/div/div[1]/div/div/h4/a"));
         firstProductName = firstProductElement.getAttribute("innerHTML");
         webDriver.findElement(By.xpath("/html/body/div[5]/div/div[2]/div/div[1]/div/div/h4/a")).click();
@@ -85,9 +96,20 @@ public class AddingProductsToCartStepdefs {
         logger.info("Navigated back to homepage");
     }
 
-    @And("I click the link for the second product")
-    public void iClickTheLinkForTheSecondProduct() {
-        webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    @And("I click the link for the second product {string}")
+    public void iClickTheLinkForTheSecondProduct(String arg0) {
+        if("laptopTwo".equals(arg0)){
+            homePage.goToLaptopSection();
+        }else if("monitorTwo".equals(arg0)){
+            homePage.goToMonitorSection();
+        } else if (!"mobileTwo".equals(arg0)){
+            logger.error("Second product not found");
+        }
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         WebElement secondProductElement = webDriver.findElement(By.xpath("/html/body/div[5]/div/div[2]/div/div[2]/div/div/h4/a"));
         secondProductName = secondProductElement.getAttribute("innerHTML");
         webDriver.findElement(By.xpath("/html/body/div[5]/div/div[2]/div/div[2]/div/div/h4/a")).click();
@@ -126,6 +148,7 @@ public class AddingProductsToCartStepdefs {
         WebElement firstBasketItemElement = webDriver.findElement(By.xpath("/html/body/div[6]/div/div[1]/div/table/tbody/tr[1]/td[2]"));
         WebElement secondBasketItemElement = webDriver.findElement(By.xpath("/html/body/div[6]/div/div[1]/div/table/tbody/tr[2]/td[2]"));
         String basketItems = firstBasketItemElement.getAttribute("innerHTML") + secondBasketItemElement.getAttribute("innerHTML");
+        System.out.println(basketItems);
 
         Boolean firstProductAdded = basketItems.contains(firstProductName);
         Boolean secondProductAdded = basketItems.contains(secondProductName);
@@ -140,4 +163,5 @@ public class AddingProductsToCartStepdefs {
         webDriver.close();
         webDriver.quit();
     }
+
 }
