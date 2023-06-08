@@ -1,2 +1,4 @@
 /src/test/resources/chromedriver.exe
 /src/test/resources/LICENSE.chromedriver
+/src/test/resources/global.properties
+/src/test/resources/log4j2.properties

@@ -5,30 +5,27 @@ import com.demoblazetest.cucumber.pages.HomePage;
 import com.demoblazetest.cucumber.util.TestContextSetup;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.junit.jupiter.api.Assertions;
 
-public class AddingProductsToCartStepdefs {
+public class HomePageStepdefs {
 
     TestContextSetup testContextSetup;
     private HomePage homePage;
     private CartPage cartPage;
-
-    private static final Logger logger = LogManager.getLogger(AddingProductsToCartStepdefs.class);
-
     private String firstProductName;
     private String secondProductName;
 
-    public AddingProductsToCartStepdefs(TestContextSetup testContextSetup){
+    private static final Logger logger = LogManager.getLogger(HomePageStepdefs.class);
+
+    public HomePageStepdefs(TestContextSetup testContextSetup){
         this.testContextSetup = testContextSetup;
     }
 
     @Given("I am on the homepage")
     public void iAmOnTheHomepage() {
-        homePage = testContextSetup.pageObjectManager.gotoHomePage();
+        homePage = testContextSetup.pageObjectManager.goToHomePage();
         logger.info("Opened homepage");
     }
 
@@ -82,7 +79,7 @@ public class AddingProductsToCartStepdefs {
             logger.error("Second product not found");
         }
         testContextSetup.genericUtils.threadSleep(5000);
-        secondProductName =homePage.findProductName(2);
+        secondProductName = homePage.findProductName(2);
         homePage.clickOnProduct(2);
         logger.info("Found second product");
     }
@@ -103,24 +100,8 @@ public class AddingProductsToCartStepdefs {
 
     @And("I navigate to the cart page")
     public void iNavigateToTheCartPage() {
-        cartPage = homePage.goToCartPage();
+        cartPage = testContextSetup.pageObjectManager.goToCartPage(firstProductName, secondProductName);
         logger.info("Opened cart page");
-    }
-
-    @Then("I should view both items in my basket")
-    public void iShouldViewBothItemsInMyBasket() {
-
-        //order of items in cart is variable so code has been written to account for this
-        testContextSetup.genericUtils.implicitTimeOut(30);
-        String basketItems = cartPage.getBasketItems();
-        System.out.println(basketItems);
-
-        Boolean firstProductAdded = basketItems.contains(firstProductName);
-        Boolean secondProductAdded = basketItems.contains(secondProductName);
-
-        Assertions.assertTrue(firstProductAdded && secondProductAdded);
-        logger.info("Asserted if both items have been added to the cart");
-
     }
 
 }

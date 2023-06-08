@@ -6,7 +6,8 @@ import org.openqa.selenium.WebElement;
 
 public class HomePage {
     private WebDriver webDriver;
-    private By cartPage = new By.ById("cartur");
+    private CartPage cartPage;
+    private By cartPageLink = new By.ById("cartur");
     private String homePageURL = "https://www.demoblaze.com/index.html";
     private By laptopSection = By.cssSelector("#itemc[onclick='byCat(\\'notebook\\')']");
     private By monitorSection = By.cssSelector("a#itemc.list-group-item[onclick='byCat(\\'monitor\\')']");
@@ -24,15 +25,9 @@ public class HomePage {
         webDriver.get(homePageURL);
     }
 
-    public CartPage goToCartPage() {
-        webDriver.findElement(cartPage).click();
-        return new CartPage(webDriver);
-    }
-
     public void goToLaptopSection() {
         webDriver.findElement(laptopSection).click();
     }
-
 
     public void goToMonitorSection() {
         webDriver.findElement(monitorSection).click();
@@ -64,6 +59,7 @@ public class HomePage {
     public void clickAddToCart(){
         webDriver.findElement(addToCart).click();
     }
+
     public void closeAddedToCartConfirmationMessage(){
         webDriver.switchTo().alert().accept();
     }

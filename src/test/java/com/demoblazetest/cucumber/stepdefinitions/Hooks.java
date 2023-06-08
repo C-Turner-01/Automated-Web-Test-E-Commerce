@@ -3,6 +3,8 @@ package com.demoblazetest.cucumber.stepdefinitions;
 import com.demoblazetest.cucumber.util.TestContextSetup;
 import io.cucumber.java.After;
 
+import java.io.IOException;
+
 public class Hooks {
 
     TestContextSetup testContextSetup;
@@ -12,7 +14,7 @@ public class Hooks {
     }
     
     @After
-    public void teardown(){
+    public void teardown() throws IOException {
         testContextSetup.testBase.webDriverManager().quit();
     }
 }

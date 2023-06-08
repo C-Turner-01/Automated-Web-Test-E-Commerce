@@ -10,6 +10,7 @@ public class GenericUtils {
 
     public GenericUtils(WebDriver webDriver){
         this.webDriver = webDriver;
+
     }
 
     public void implicitTimeOut(int secs){

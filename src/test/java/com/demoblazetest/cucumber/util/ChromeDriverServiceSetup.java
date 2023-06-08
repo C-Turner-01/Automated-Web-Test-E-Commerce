@@ -4,10 +4,7 @@ import org.openqa.selenium.chrome.ChromeDriverService;
 
 import java.io.File;
 
-public class WebAutomationUtil {
-    public static void setDriverLocation(String path) {
-        System.setProperty("webdriver.chrome.driver", path);
-    }
+public class ChromeDriverServiceSetup {
 
     public static ChromeDriverService getChromeDriverService(String path) {
         return new ChromeDriverService
