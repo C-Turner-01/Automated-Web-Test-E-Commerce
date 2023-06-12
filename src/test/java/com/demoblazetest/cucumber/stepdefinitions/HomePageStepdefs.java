@@ -29,15 +29,15 @@ public class HomePageStepdefs {
         logger.info("Opened homepage");
     }
 
-    @When("I click the link for the first product {string}")
-    public void iClickTheLinkForTheFirstProduct(String arg0) {
-        if("laptopOne".equals(arg0)){
+    @When("^I click the link for the first product (.+)$")
+    public void iClickTheLinkForTheFirstProduct(String productSection) {
+        if("laptopOne".equals(productSection)){
             testContextSetup.genericUtils.implicitTimeOut(30);
             homePage.goToLaptopSection();
-        }else if("monitorOne".equals(arg0)){
+        }else if("monitorOne".equals(productSection)){
             testContextSetup.genericUtils.implicitTimeOut(30);
             homePage.goToMonitorSection();
-        } else if (!"mobileOne".equals(arg0)){
+        } else if (!("mobileOne".equals(productSection) || "laptopOne".equals(productSection) || "monitorOne".equals(productSection))){
             logger.error("First product not found");
         }
         testContextSetup.genericUtils.threadSleep(5000);
@@ -67,15 +67,15 @@ public class HomePageStepdefs {
         logger.info("Navigated back to homepage");
     }
 
-    @And("I click the link for the second product {string}")
-    public void iClickTheLinkForTheSecondProduct(String arg0) {
-        if("laptopTwo".equals(arg0)){
+    @And("^I click the link for the second product (.+)$")
+    public void iClickTheLinkForTheSecondProduct(String productSection) {
+        if("laptopTwo".equals(productSection)){
             testContextSetup.genericUtils.implicitTimeOut(30);
             homePage.goToLaptopSection();
-        }else if("monitorTwo".equals(arg0)){
+        }else if("monitorTwo".equals(productSection)){
             testContextSetup.genericUtils.implicitTimeOut(30);
             homePage.goToMonitorSection();
-        } else if (!"mobileTwo".equals(arg0)){
+        } else if (!"mobileTwo".equals(productSection)){
             logger.error("Second product not found");
         }
         testContextSetup.genericUtils.threadSleep(5000);

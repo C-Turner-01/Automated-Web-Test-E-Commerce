@@ -10,6 +10,9 @@ import org.junit.runner.RunWith;
         plugin = {"pretty", "html:target/testReport.html", "json:target/jsonReport.json", "rerun:target/rerun.txt"},
         monochrome = true,
         glue = {"com.demoblazetest.cucumber.stepdefinitions"}
+        //,tags ="@AddingItemsToCart"
+        //,tags ="@PurchasingItem"
 )
 public class TestRunner {
+
 }

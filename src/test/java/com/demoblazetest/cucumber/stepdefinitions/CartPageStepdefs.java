@@ -2,6 +2,7 @@ package com.demoblazetest.cucumber.stepdefinitions;
 
 import com.demoblazetest.cucumber.pages.CartPage;
 import com.demoblazetest.cucumber.util.TestContextSetup;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -35,5 +36,11 @@ public class CartPageStepdefs {
         Assertions.assertTrue(firstProductAdded && secondProductAdded);
         logger.info("Asserted if both items have been added to the cart");
 
+    }
+
+    @And("I click purchase")
+    public void iClickPurchase() {
+        cartPage = testContextSetup.pageObjectManager.getCartPage();
+        logger.info("Purchase button clicked");
     }
 }
