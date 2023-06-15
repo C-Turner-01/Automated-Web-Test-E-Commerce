@@ -1,46 +1,10 @@
-[INFO] 2023-06-12 11:54:33.665 [main] HomePageStepdefs - Opened homepage
-[ERROR] 2023-06-12 11:54:34.384 [main] HomePageStepdefs - First product not found
-[INFO] 2023-06-12 11:54:42.888 [main] HomePageStepdefs - Found first product
-[INFO] 2023-06-12 11:54:46.979 [main] HomePageStepdefs - Added first product to cart
-[INFO] 2023-06-12 11:54:50.249 [main] HomePageStepdefs - Closed alert
-[INFO] 2023-06-12 11:54:50.770 [main] HomePageStepdefs - Navigated back to homepage
-[ERROR] 2023-06-12 11:54:50.773 [main] HomePageStepdefs - Second product not found
-[INFO] 2023-06-12 11:54:56.521 [main] HomePageStepdefs - Found second product
-[INFO] 2023-06-12 11:54:57.114 [main] HomePageStepdefs - Added second product to cart
-[INFO] 2023-06-12 11:55:00.149 [main] HomePageStepdefs - Closed alert
-[INFO] 2023-06-12 11:55:00.748 [main] HomePageStepdefs - Opened cart page
-[INFO] 2023-06-12 11:55:01.575 [main] CartPageStepdefs - Asserted if both items have been added to the cart
-[INFO] 2023-06-12 11:55:19.624 [main] HomePageStepdefs - Opened homepage
-[ERROR] 2023-06-12 11:55:19.626 [main] HomePageStepdefs - First product not found
-[INFO] 2023-06-12 11:55:25.762 [main] HomePageStepdefs - Found first product
-[INFO] 2023-06-12 11:55:26.231 [main] HomePageStepdefs - Added first product to cart
-[INFO] 2023-06-12 11:55:29.265 [main] HomePageStepdefs - Closed alert
-[INFO] 2023-06-12 11:55:29.848 [main] HomePageStepdefs - Navigated back to homepage
-[ERROR] 2023-06-12 11:55:29.849 [main] HomePageStepdefs - Second product not found
-[INFO] 2023-06-12 11:55:35.374 [main] HomePageStepdefs - Found second product
-[INFO] 2023-06-12 11:55:35.833 [main] HomePageStepdefs - Added second product to cart
-[INFO] 2023-06-12 11:55:38.886 [main] HomePageStepdefs - Closed alert
-[INFO] 2023-06-12 11:55:39.631 [main] HomePageStepdefs - Opened cart page
-[INFO] 2023-06-12 11:55:40.479 [main] CartPageStepdefs - Asserted if both items have been added to the cart
-[INFO] 2023-06-12 11:55:52.713 [main] HomePageStepdefs - Opened homepage
-[ERROR] 2023-06-12 11:55:52.721 [main] HomePageStepdefs - First product not found
-[INFO] 2023-06-12 11:55:59.014 [main] HomePageStepdefs - Found first product
-[INFO] 2023-06-12 11:56:00.008 [main] HomePageStepdefs - Added first product to cart
-[INFO] 2023-06-12 11:56:03.293 [main] HomePageStepdefs - Closed alert
-[INFO] 2023-06-12 11:56:05.631 [main] HomePageStepdefs - Navigated back to homepage
-[ERROR] 2023-06-12 11:56:05.634 [main] HomePageStepdefs - Second product not found
-[INFO] 2023-06-12 11:56:12.923 [main] HomePageStepdefs - Found second product
-[INFO] 2023-06-12 11:56:13.760 [main] HomePageStepdefs - Added second product to cart
-[INFO] 2023-06-12 11:56:16.909 [main] HomePageStepdefs - Closed alert
-[INFO] 2023-06-12 11:56:18.055 [main] HomePageStepdefs - Opened cart page
-[INFO] 2023-06-12 11:56:23.858 [main] CartPageStepdefs - Asserted if both items have been added to the cart
-[INFO] 2023-06-12 11:56:52.642 [main] HomePageStepdefs - Opened homepage
-[ERROR] 2023-06-12 11:56:52.647 [main] HomePageStepdefs - First product not found
-[INFO] 2023-06-12 11:56:58.360 [main] HomePageStepdefs - Found first product
-[INFO] 2023-06-12 11:56:58.840 [main] HomePageStepdefs - Added first product to cart
-[INFO] 2023-06-12 11:57:01.872 [main] HomePageStepdefs - Closed alert
-[INFO] 2023-06-12 11:57:02.501 [main] HomePageStepdefs - Opened cart page
-[INFO] 2023-06-12 11:57:02.596 [main] CartPageStepdefs - Purchase button clicked
-[INFO] 2023-06-12 11:57:04.988 [main] AddressFormStepdefs - Filled in form details
-[INFO] 2023-06-12 11:57:05.183 [main] AddressFormStepdefs - Clicked purchase button
-[INFO] 2023-06-12 11:57:05.339 [main] AddressFormStepdefs - Confirmed if confirmation message is correct
+[INFO] 2023-06-15 13:47:16.662 [main] HomePageStepdefs - Opened homepage
+[ERROR] 2023-06-15 13:47:16.723 [main] HomePageStepdefs - First product not found
+[INFO] 2023-06-15 13:47:22.956 [main] HomePageStepdefs - Found first product
+[INFO] 2023-06-15 13:47:23.487 [main] HomePageStepdefs - Added first product to cart
+[INFO] 2023-06-15 13:47:26.552 [main] HomePageStepdefs - Closed alert
+[INFO] 2023-06-15 13:47:27.370 [main] HomePageStepdefs - Opened cart page
+[INFO] 2023-06-15 13:47:27.374 [main] CartPageStepdefs - Purchase button clicked
+[INFO] 2023-06-15 13:47:31.780 [main] AddressFormStepdefs - Filled in form details
+[INFO] 2023-06-15 13:47:32.118 [main] AddressFormStepdefs - Clicked purchase button
+[INFO] 2023-06-15 13:47:32.285 [main] AddressFormStepdefs - Confirmed if confirmation message is correct

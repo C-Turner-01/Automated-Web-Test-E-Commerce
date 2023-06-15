@@ -16,6 +16,16 @@
     <maven.compiler.target>19</maven.compiler.target>
   </properties>
 
+    <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>2.22.0</version>
+    <configuration>
+      <parallel>methods</parallel>
+      <threadCount>4</threadCount>
+    </configuration>
+  </plugin>
+
   <dependencies>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
@@ -59,4 +69,5 @@
       <version>7.11.1</version>
     </dependency>
   </dependencies>
+
 </project>

@@ -1,4 +1,5 @@
 Feature: Testing that more than one product can be added to the cart
+  @AddingItemsToCart
   Scenario Outline: Adding products from the homepage to the cart
     Given I am on the homepage
     When I click the link for the first product "<ProductOne>"

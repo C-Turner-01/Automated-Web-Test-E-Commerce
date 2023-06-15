@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         monochrome = true,
         glue = {"com.demoblazetest.cucumber.stepdefinitions"}
         //,tags ="@AddingItemsToCart"
-        //,tags ="@PurchasingItem"
+        ,tags ="@PurchasingItem"
 )
 public class TestRunner {
 
