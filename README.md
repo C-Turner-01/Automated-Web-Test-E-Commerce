@@ -24,7 +24,7 @@ This application has been created to demonstrate how cucumber and selenium can b
 5. Create a global.properties file in the resources folder set browser=chrome and driverpath to the location where chromedriver has been installed.
 6. Run the Automated-Web-Test-E-Commerce TestRunner to start the application.
 
-## Techologies/Libraries/Resources
+## Technologies/Libraries/Resources
 
 - Java
 - Junit Jupiter
